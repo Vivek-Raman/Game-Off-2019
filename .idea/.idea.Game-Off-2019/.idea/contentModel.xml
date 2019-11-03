@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Projects\Unity\Game-Off-2019" t="IncludeRecursive">
@@ -8,6 +8,7 @@
         <e p="Scripts" t="Include">
           <e p="Player" t="Include">
             <e p="CeilingCheck.cs" t="Include" />
+            <e p="CharacterController2D.cs" t="Include" />
             <e p="GroundCheck.cs" t="Include" />
             <e p="Player.cs" t="Include" />
           </e>
