@@ -13,20 +13,17 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private Collider2D crouchDisableCollider = null;				// A collider that will be disabled when crouching
     
     const float GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-    private bool _grounded;            // Whether or not the player is grounded.
     const float CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
+    
     private Rigidbody2D _rigidbody2D;
+    private bool _grounded;            // Whether or not the player is grounded.
     private bool _facingRight = true;  // For determining which way the player is currently facing.
     private Vector3 _velocity = Vector3.zero;
-
-    [Header("Events")]
+    
     [Space]
-
+    [Header("Events")]
+    public UnityEvent onJumpEvent;
     public UnityEvent onLandEvent;
-
-    [System.Serializable]
-    public class BoolEvent : UnityEvent<bool> { }
-
     public BoolEvent onCrouchEvent;
     private bool _wasCrouching = false;
 
@@ -129,6 +126,7 @@ public class CharacterController2D : MonoBehaviour
             // Add a vertical force to the player.
             _grounded = false;
             _rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+            onJumpEvent.Invoke();
         }
     }
 
@@ -144,3 +142,6 @@ public class CharacterController2D : MonoBehaviour
         transform.localScale = theScale;
     }
 }
+
+[System.Serializable]
+public class BoolEvent : UnityEvent<bool> { }
