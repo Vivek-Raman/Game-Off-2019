@@ -7,6 +7,8 @@
         <e p="Scripts" t="Include">
           <e p="Coin.cs" t="Include" />
           <e p="Player" t="Include">
+            <e p="CameraController.cs" t="Include" />
+            <e p="CamState.cs" t="Include" />
             <e p="CharacterController2D.cs" t="Include" />
             <e p="Player.cs" t="Include" />
           </e>
