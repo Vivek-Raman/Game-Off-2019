@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private CameraController cam = null;
 
     [Header("Movement Properties")]
-    public float movementSpeed = 5f;
-    [Range(0f, 1f)] public float airControlModifier = 0.75f;
+    public float movementSpeed = 1f;
+    [Range(0f, 1f)] public float airControlModifier = 0.7f;
     
     private CharacterController2D _controller = null;
     private float _inH = 0f;

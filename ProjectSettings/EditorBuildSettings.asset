@@ -9,5 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Debug/DebugScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: a3b236dae143bac41800b8f4c4c046b1,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f4c88aea5d2dff54ca9a4b1650542081,
       type: 2}

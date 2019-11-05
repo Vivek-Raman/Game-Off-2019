@@ -1,11 +1,14 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
     private Animator _animator = null;
     private int _property = 0;
-    private int _currentState = 0;
+    private int _currentState = 6;
+    
+    
     private void Awake()
     {
         this.TryGetComponent(out _animator);
